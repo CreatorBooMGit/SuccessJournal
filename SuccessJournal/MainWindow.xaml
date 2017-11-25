@@ -1,0 +1,18 @@
+﻿<Window x:Class="SuccessJournal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuccessJournal"
+        mc:Ignorable="d"
+        Title="Журнал успішності студентів" Height="328.318" Width="521.128">
+
+    <Grid>
+        <ListBox Margin="10">
+            <ListBoxItem x:Name="ListBoxItem_Group" Content="Групи" MouseDoubleClick="ListBoxItem_Group_MouseDoubleClick"/>
+            <ListBoxItem x:Name="ListBoxItem_Students" Content="Студенти" MouseDoubleClick="ListBoxItem_Students_MouseDoubleClick"/>
+            <ListBoxItem x:Name="ListBoxItem_Directories" Content="Довідники" MouseDoubleClick="ListBoxItem_Directories_MouseDoubleClick"/>
+        </ListBox>
+
+    </Grid>
+</Window>

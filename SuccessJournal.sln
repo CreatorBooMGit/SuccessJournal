@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuccessJournal", "SuccessJournal\SuccessJournal.csproj", "{F3630B7D-7EB8-4D06-BA7E-C739AF7B29B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access", "Access\Access.csproj", "{A41784DE-A4E8-459A-BBCB-E860D5523A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{7294F38F-C40B-4585-9AFB-915C69997D22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3630B7D-7EB8-4D06-BA7E-C739AF7B29B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3630B7D-7EB8-4D06-BA7E-C739AF7B29B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3630B7D-7EB8-4D06-BA7E-C739AF7B29B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3630B7D-7EB8-4D06-BA7E-C739AF7B29B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41784DE-A4E8-459A-BBCB-E860D5523A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41784DE-A4E8-459A-BBCB-E860D5523A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41784DE-A4E8-459A-BBCB-E860D5523A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41784DE-A4E8-459A-BBCB-E860D5523A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7294F38F-C40B-4585-9AFB-915C69997D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7294F38F-C40B-4585-9AFB-915C69997D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7294F38F-C40B-4585-9AFB-915C69997D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7294F38F-C40B-4585-9AFB-915C69997D22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B727E39-60D1-400E-82E9-0957602B878F}
+	EndGlobalSection
+EndGlobal
