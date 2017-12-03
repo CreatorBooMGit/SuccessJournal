@@ -9,3 +9,5 @@ C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.csprojResolve
 C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.csproj.CoreCompileInputs.cache
 C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.dll
 C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.pdb
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

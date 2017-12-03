@@ -4,14 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuccessJournal"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
+        xmlns:MaterialUI="http://materialdesigninxaml.net/winfx/xaml/themes"
+	    FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Title="Журнал успішності студентів" Height="328.318" Width="521.128">
 
     <Grid>
         <TabControl>
-            <TabItem x:Name="tabItem_Group" Header="Групи" HorizontalAlignment="Left" Width="90">
+            <TabItem x:Name="tabItem_Group" Header="Групи" HorizontalAlignment="Center" Width="120">
                 <Grid Background="#FFFFFFFF">
-                    <DataGrid x:Name="groupsGrid" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="71*"/>
+                        <ColumnDefinition Width="436*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="groupsGrid" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding course}" Header="Course" Width="100"/>
                             <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="100"/>
@@ -19,7 +26,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabItem_Students" Header="Студенти" Width="90">
+            <TabItem x:Name="tabItem_Students" Header="Студенти" Width="120">
                 <Grid Background="#FFFFFFFF">
                     <DataGrid x:Name="studentsGrid" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>

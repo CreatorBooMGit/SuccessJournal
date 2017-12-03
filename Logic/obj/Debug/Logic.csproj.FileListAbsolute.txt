@@ -12,3 +12,5 @@ C:\Users\pauto\source\repos\SuccessJournal\Logic\obj\Debug\Logic.csprojResolveAs
 C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Access.dll
 C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Access.pdb
 C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Access.dll.config
+C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
