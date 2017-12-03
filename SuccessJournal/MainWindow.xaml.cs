@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
+using System.Data.Entity;
+using Logic;
 
 namespace SuccessJournal
 {
@@ -20,27 +23,25 @@ namespace SuccessJournal
     /// </summary>
     public partial class MainWindow : Window
     {
+        GroupManagment groupManagment;
+        StudentManagment studentManagment;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            groupManagment = new GroupManagment();
+            studentManagment = new StudentManagment();
+
+            groupManagment.refreshStudents();
+            studentManagment.refreshStudents();
+
+            groupsGrid.ItemsSource = groupManagment.GetBindingList();
+            studentsGrid.ItemsSource = studentManagment.GetBindingList();
+            this.Closing += MainWindow_Closing;
         }
 
-        private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void ListBoxItem_Group_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void ListBoxItem_Students_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void ListBoxItem_Directories_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }

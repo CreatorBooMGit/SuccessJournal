@@ -1,0 +1,11 @@
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\Access.dll.config
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\Access.dll
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\Access.pdb
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\EntityFramework.dll
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\EntityFramework.xml
+C:\Users\pauto\source\repos\SuccessJournal\Access\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.csprojResolveAssemblyReference.cache
+C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.csproj.CoreCompileInputs.cache
+C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.dll
+C:\Users\pauto\source\repos\SuccessJournal\Access\obj\Debug\Access.pdb

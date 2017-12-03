@@ -8,11 +8,34 @@
         Title="Журнал успішності студентів" Height="328.318" Width="521.128">
 
     <Grid>
-        <ListBox Margin="10">
-            <ListBoxItem x:Name="ListBoxItem_Group" Content="Групи" MouseDoubleClick="ListBoxItem_Group_MouseDoubleClick"/>
-            <ListBoxItem x:Name="ListBoxItem_Students" Content="Студенти" MouseDoubleClick="ListBoxItem_Students_MouseDoubleClick"/>
-            <ListBoxItem x:Name="ListBoxItem_Directories" Content="Довідники" MouseDoubleClick="ListBoxItem_Directories_MouseDoubleClick"/>
-        </ListBox>
-
+        <TabControl>
+            <TabItem x:Name="tabItem_Group" Header="Групи" HorizontalAlignment="Left" Width="90">
+                <Grid Background="#FFFFFFFF">
+                    <DataGrid x:Name="groupsGrid" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding course}" Header="Course" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabItem_Students" Header="Студенти" Width="90">
+                <Grid Background="#FFFFFFFF">
+                    <DataGrid x:Name="studentsGrid" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding surname}" Header="Surname" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding patronymic}" Header="Patronymic" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding birthday, StringFormat=dd-MM-yyyy}" Header="Birthday" Width="120"/>
+                            <DataGridTextColumn Binding="{Binding email}" Header="Email" Width="120"/>
+                            <DataGridTextColumn Binding="{Binding date_receipt, StringFormat=d}" Header="Date receipt" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding date_issue, StringFormat=d}" Header="Date issue" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding typesOfStudy.name}" Header="Form of study" Width="120"/>
+                            <DataGridTextColumn Binding="{Binding typesPayStudy.name}" Header="Pay of study" Width="120"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
