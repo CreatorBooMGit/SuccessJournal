@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SuccessJournal
+namespace SuccessJournal.GroupsUI
 {
     /// <summary>
     /// Логика взаимодействия для GroupPage.xaml

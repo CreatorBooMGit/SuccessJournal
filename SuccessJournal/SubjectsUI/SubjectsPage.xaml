@@ -1,0 +1,57 @@
+﻿<Page x:Class="SuccessJournal.SubjectsUI.SubjectsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:SuccessJournal.SubjectsUI"
+
+        xmlns:MaterialUI="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" 
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+	    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+
+        mc:Ignorable="d" 
+        Title="SubjectsPage"
+        IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <MaterialUI:Card Margin="0,0,0,0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid>
+                <StackPanel Orientation="Horizontal" Height="60" VerticalAlignment="Top">
+                    <MenuItem Name="btnCreateSubject"  Height="Auto" Cursor="Hand" Click="btnCreateSubject_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <MaterialUI:PackIcon Kind="PlusCircle" Foreground="{DynamicResource MaterialDesignBody}" Height="50" Width="50" Margin="0, 5, 0, 5"/>
+                                <TextBlock Text="Create Subject" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="btnRemoveSubject"  Height="Auto" Cursor="Hand" Click="btnRemoveSubject_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <MaterialUI:PackIcon Kind="MinusCircle" Foreground="{DynamicResource MaterialDesignBody}" Height="50" Width="50" Margin="0, 5, 0, 5"/>
+                                <TextBlock Text="Remove Subject" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </StackPanel>
+
+                <TextBlock Text="Subjects:" Height="20" VerticalAlignment="Top" Margin="10,80,0,0" FontSize="16"/>
+                <DataGrid x:Name="grdSubjects" Margin="0,120,1,0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="100"/>
+                        <DataGridTextColumn Binding="{Binding Name}" Header="Name" MinWidth="100"/>
+                    </DataGrid.Columns>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Name="MenuItem_EditSubject" Header="Edit subject" Click="MenuItem_EditSubject_Click"/>
+                            <MenuItem Name="MenuItem_RemoveSubject" Header="Remove subject" Click="btnRemoveSubject_Click"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+        </MaterialUI:Card>
+    </Grid>
+</Page>

@@ -1,5 +1,14 @@
 ﻿
 FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\App.xaml;;
-FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\GroupsPage.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\GroupsUI\AddEditGroupWindow.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\GroupsUI\GroupsPage.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\MainPage.xaml;;
 FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\MainWindow.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\SearchWindow.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\StudentsUI\AddEditStudentWindow.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\StudentsUI\StudentsPage.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\SubjectsUI\AddEditSubjectWindow.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\SubjectsUI\SubjectsPage.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\TeachersUI\AddEditTeacherWindow.xaml;;
+FC:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\TeachersUI\TeachersPage.xaml;;
 

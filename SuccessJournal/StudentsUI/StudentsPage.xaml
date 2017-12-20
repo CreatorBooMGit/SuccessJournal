@@ -1,0 +1,138 @@
+﻿<Page x:Class="SuccessJournal.StudentsUI.StudentsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:SuccessJournal.StudentsUI"
+
+        xmlns:MaterialUI="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" 
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+	    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+
+        mc:Ignorable="d" 
+        Title="StudentsPage"
+        IsVisibleChanged="Page_IsVisibleChanged"
+        >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <MaterialUI:Card Margin="0,0,5,0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid>
+                    <TextBlock Text="Students:" Margin="10,40,0,10" HorizontalAlignment="Left" FontSize="20"/>
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20,20,0,0">
+                        <ToolBar HorizontalAlignment="Right">
+                            <Button Name="btnAddStudent" ToolTip="Add student" Cursor="Hand" Foreground="{DynamicResource MaterialDesignBody}"
+                                    Click="btnAddStudent_Click">
+                                <MaterialUI:PackIcon Kind="Plus"/>
+                            </Button>
+                            <Button Name="btnRemoveStudent" ToolTip="Remove student" Cursor="Hand" Foreground="{DynamicResource MaterialDesignBody}"
+                                    Click="btnRemoveStudent_Click">
+                                <MaterialUI:PackIcon Kind="Delete"/>
+                            </Button>
+                            <Button Name="btnFindStudent" ToolTip="Find student" Cursor="Hand" Foreground="{DynamicResource MaterialDesignBody}"
+                                    Click="btnFindStudent_Click">
+                                <MaterialUI:PackIcon Kind="AccountSearch"/>
+                            </Button>
+                        </ToolBar>
+                    </Grid>
+                </Grid>
+
+                <ListBox Name="lstStudents" SelectionChanged="lstStudents_SelectionChanged" Margin="10,80,10,10"
+                         VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Edit student" Click="btnEditStudent_Click"/>
+                            <MenuItem Header="Remove student" Click="btnRemoveStudent_Click"/>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Fullname}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </MaterialUI:Card>
+
+        <MaterialUI:Card Margin="5,0,0,0" Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid>
+                <Grid Name="grdTeamContent" Visibility="Visible">
+                    <StackPanel Orientation="Horizontal" Grid.Column="0">
+                        <StackPanel Orientation="Vertical" Margin="30,40,0,0" VerticalAlignment="Top">
+                            <TextBlock Name="txtName" FontSize="34" Margin="5" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Grid Margin="0,125,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Vertical">
+                            <Grid>
+                                <TextBlock Text="Student subject mark:" Margin="10,20,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"/>
+                                <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0">
+                                    <ToolBar HorizontalAlignment="Right" Background="{DynamicResource MaterialDesignPaper}" Foreground="{DynamicResource MaterialDesignPaper}">
+                                        <Button Name="btnAddMark"  ToolTip="Add mark" Cursor="Hand" Foreground="{DynamicResource MaterialDesignBody}"
+                                                Click="btnAddMark_Click">
+                                            <MaterialUI:PackIcon Kind="Plus"/>
+                                        </Button>
+                                        <Button Name="btnRemoveMark" ToolTip="Remove mark" Cursor="Hand" Foreground="{DynamicResource MaterialDesignBody}"
+                                                Click="btnRemoveMark_Click">
+                                            <MaterialUI:PackIcon Kind="Delete"/>
+                                        </Button>
+                                    </ToolBar>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                        <DataGrid x:Name="grdMembersTeam" Margin="10,60,10,10" 
+                                          AutoGenerateColumns="False" CanUserReorderColumns="False" 
+                                          CanUserResizeColumns="True" IsReadOnly="True" 
+                                          MaxColumnWidth="150" 
+                                          SelectionMode="Single">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Date, StringFormat=dd-MM-yyyy}" Header="Date"/>
+                                <DataGridTextColumn Binding="{Binding Value}" Header="Value"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+
+                <StackPanel Name="grdEmptyContent" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
+                    <TextBlock Text="Select project in left list" Margin="0, 10, 0,10" FontWeight="Normal" FontSize="30" HorizontalAlignment="Center"/>
+                    <!--<MaterialUI:PackIcon Kind="Glasses" Margin="0, 0, 0,0" Height="100" Width="100" HorizontalAlignment="Center"/>-->
+                </StackPanel>
+            </Grid>
+        </MaterialUI:Card>
+
+        <MaterialUI:Card Margin="5,0,0,0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid>
+                    <TextBlock Text="Subjects:" Margin="10,40,0,10" HorizontalAlignment="Left" FontSize="20"/>
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20,20,0,0">
+                        <ToolBar HorizontalAlignment="Right" Background="{DynamicResource MaterialDesignPaper}" Foreground="{DynamicResource MaterialDesignPaper}">
+                            <Button Name="btnFindSubject" ToolTip="Find subject" Cursor="Hand" Foreground="{DynamicResource MaterialDesignBody}"
+                                    Click="btnFindSubject_Click">
+                                <MaterialUI:PackIcon Kind="AccountSearch"/>
+                            </Button>
+                        </ToolBar>
+                    </Grid>
+                </Grid>
+
+                <ListBox Name="lstSubjects" SelectionChanged="lstSubjects_SelectionChanged" Margin="10,80,10,10"
+                         VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Name}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </MaterialUI:Card>
+    </Grid>
+</Page>

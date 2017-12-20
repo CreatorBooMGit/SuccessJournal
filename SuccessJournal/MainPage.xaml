@@ -1,0 +1,85 @@
+﻿<Page x:Class="SuccessJournal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:SuccessJournal"
+    xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+    mc:Ignorable="d" 
+      
+    xmlns:MaterialUI="http://materialdesigninxaml.net/winfx/xaml/themes"
+	
+    FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight="Medium"
+    TextElement.FontSize="14"
+    MinWidth="875"
+    MinHeight="675">
+
+
+    <MaterialUI:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
+        <MaterialUI:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+            <MaterialUI:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="212">
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                                    DockPanel.Dock="Top"
+                                    HorizontalAlignment="Right" Margin="16"
+                                    IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
+                    <ListBox x:Name="lstMenu" Margin="0 16 0 16" SelectionChanged="lstMenu_SelectionChanged">
+                        <ListBoxItem>
+                            <TextBlock Text="Groups" Margin="32 0 32 0" />
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <TextBlock Text="Students" Margin="32 0 32 0" />
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <TextBlock Text="Subjects" Margin="32 0 32 0" />
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <TextBlock Text="Teachers" Margin="32 0 32 0" />
+                        </ListBoxItem>
+                    </ListBox>
+                </DockPanel>
+            </MaterialUI:DrawerHost.LeftDrawerContent>
+            <DockPanel>
+                <MaterialUI:ColorZone Padding="16" MaterialUI:ShadowAssist.ShadowDepth="Depth2"
+                                            Mode="PrimaryMid" DockPanel.Dock="Top">
+                    <DockPanel>
+                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
+                                        x:Name="MenuToggleButton"/>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Success Students</TextBlock>
+                    </DockPanel>
+                </MaterialUI:ColorZone>
+
+                <MaterialUI:Card VerticalAlignment="Stretch">
+                    <Grid>
+
+                        <Frame 
+                            x:Name="StudentsUI" 
+                            Source="/SuccessJournal;component/StudentsUI/StudentsPage.xaml" 
+                            Margin="10, 5, 10, 5" 
+                            Visibility="Hidden" 
+                            IsEnabled="False"
+                            Grid.Column="0"/>
+
+                        <Frame 
+                            x:Name="SubjectsUI" 
+                            Source="/SuccessJournal;component/SubjectsUI/SubjectsPage.xaml" 
+                            Margin="10, 5, 10, 5" 
+                            Visibility="Hidden" 
+                            IsEnabled="False"
+                            Grid.Column="0"/>
+
+                        <Frame 
+                            x:Name="TeachersUI" 
+                            Source="/SuccessJournal;component/TeachersUI/TeachersPage.xaml" 
+                            Margin="10, 5, 10, 5" 
+                            Visibility="Hidden" 
+                            IsEnabled="False"
+                            Grid.Column="0"/>
+                    </Grid>
+                </MaterialUI:Card>
+            </DockPanel>
+        </MaterialUI:DrawerHost>
+    </MaterialUI:DialogHost>
+</Page>

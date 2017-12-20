@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\App.xaml
-2-307429502
+11-184358239
 
-101396886433
-24548111650
-GroupsPage.xaml;MainWindow.xaml;
+19843568184
+24-500448891
+GroupsUI\AddEditGroupWindow.xaml;GroupsUI\GroupsPage.xaml;MainPage.xaml;MainWindow.xaml;SearchWindow.xaml;StudentsUI\AddEditStudentWindow.xaml;StudentsUI\StudentsPage.xaml;SubjectsUI\AddEditSubjectWindow.xaml;SubjectsUI\SubjectsPage.xaml;TeachersUI\AddEditTeacherWindow.xaml;TeachersUI\TeachersPage.xaml;
 
 True
 

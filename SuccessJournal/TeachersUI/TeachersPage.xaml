@@ -1,0 +1,57 @@
+﻿<Page x:Class="SuccessJournal.TeachersUI.TeachersPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:SuccessJournal.TeachersUI"
+
+        xmlns:MaterialUI="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" 
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+	    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+
+        mc:Ignorable="d" 
+        Title="TeachersPage"
+        IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <MaterialUI:Card Margin="0,0,0,0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid>
+                <StackPanel Orientation="Horizontal" Height="60" VerticalAlignment="Top">
+                    <MenuItem Name="btnCreateTeacher"  Height="Auto" Cursor="Hand" Click="btnCreateTeacher_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <MaterialUI:PackIcon Kind="PlusCircle" Foreground="{DynamicResource MaterialDesignBody}" Height="50" Width="50" Margin="0, 5, 0, 5"/>
+                                <TextBlock Text="Create Teacher" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+                    <MenuItem Name="btnRemoveTeacher"  Height="Auto" Cursor="Hand" Click="btnRemoveTeacher_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <MaterialUI:PackIcon Kind="MinusCircle" Foreground="{DynamicResource MaterialDesignBody}" Height="50" Width="50" Margin="0, 5, 0, 5"/>
+                                <TextBlock Text="Remove Teacher" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </StackPanel>
+
+                <TextBlock Text="Teachers:" Height="20" VerticalAlignment="Top" Margin="10,80,0,0" FontSize="16"/>
+                <DataGrid x:Name="grdTeachers" Margin="0,120,1,0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="100"/>
+                        <DataGridTextColumn Binding="{Binding Fullname}" Header="Name" MinWidth="100"/>
+                    </DataGrid.Columns>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Name="MenuItem_EditTeacher" Header="Edit Teacher" Click="MenuItem_EditTeacher_Click"/>
+                            <MenuItem Name="MenuItem_RemoveTeacher" Header="Remove Teacher" Click="btnRemoveTeacher_Click"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+        </MaterialUI:Card>
+    </Grid>
+</Page>
