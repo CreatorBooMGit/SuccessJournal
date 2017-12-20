@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access", "Access\Access.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{7294F38F-C40B-4585-9AFB-915C69997D22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{27CF0157-BD82-41BD-B93B-14D83A783571}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7294F38F-C40B-4585-9AFB-915C69997D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7294F38F-C40B-4585-9AFB-915C69997D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7294F38F-C40B-4585-9AFB-915C69997D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CF0157-BD82-41BD-B93B-14D83A783571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CF0157-BD82-41BD-B93B-14D83A783571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CF0157-BD82-41BD-B93B-14D83A783571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CF0157-BD82-41BD-B93B-14D83A783571}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

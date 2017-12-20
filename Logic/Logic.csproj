@@ -47,9 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GroupManagment.cs" />
+    <Compile Include="Interfaces\IManagment.cs" />
+    <Compile Include="Managments\GroupsManagment.cs" />
+    <Compile Include="Managments\JournalsManagment.cs" />
+    <Compile Include="Managments\JournalsSubjectManagment.cs" />
+    <Compile Include="Managments\MarksManagment.cs" />
+    <Compile Include="Managments\StudentsManagment.cs" />
+    <Compile Include="Managments\SubjectsManagment.cs" />
+    <Compile Include="Managments\TeachersManagment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentManagment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +66,11 @@
       <Project>{a41784de-a4e8-459a-bbcb-e860d5523a2f}</Project>
       <Name>Access</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{27CF0157-BD82-41BD-B93B-14D83A783571}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

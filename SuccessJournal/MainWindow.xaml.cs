@@ -1,49 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+using MahApps.Metro.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Configuration;
-using System.Data.Entity;
-using Logic;
 
 namespace SuccessJournal
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
-        GroupManagment groupManagment;
-        StudentManagment studentManagment;
+        public static MainWindow instance;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            groupManagment = new GroupManagment();
-            studentManagment = new StudentManagment();
-
-            groupManagment.refreshStudents();
-            studentManagment.refreshStudents();
-
-            groupsGrid.ItemsSource = groupManagment.GetBindingList();
-            studentsGrid.ItemsSource = studentManagment.GetBindingList();
-            this.Closing += MainWindow_Closing;
+            instance = this;
         }
 
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
+        //private void MetroWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        //{
+        //    if (e.Key == Key.Escape)
+        //    {
+        //        int currentMenuItem = MainPage.instance.lstMenu.SelectedIndex;
+        //        switch (currentMenuItem)
+        //        {
+        //            case 0: TasksPage.instance.Restore(); break;
+        //            case 1: ProjectsPage.instance.Restore(); break;
+        //            case 2: TeamsPage.instance.Restore(); break;
+        //            case 3: MembersPage.instance.Restore(); break;
+        //            case 4: PostsDirectoryPage.instance.Restore(); break;
+        //            default: break;
+        //        }
+        //    }
+        //}
     }
 }

@@ -38,3 +38,6 @@ C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\bin\Debug\ru\EntityFra
 C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\obj\Debug\GroupsPage.g.cs
 C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\obj\Debug\App.baml
 C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\obj\Debug\GroupsPage.baml
+C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\bin\Debug\Domain.dll
+C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\bin\Debug\Domain.pdb
+C:\Users\pauto\source\repos\SuccessJournal\SuccessJournal\bin\Debug\Domain.dll.config

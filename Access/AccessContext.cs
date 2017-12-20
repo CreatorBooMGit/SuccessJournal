@@ -4,46 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using Domain;
 
 namespace Access
 {
-    public class StudentContext : DbContext
+    public class AccessContext : DbContext
     {
-        public StudentContext() : base("DefaultConnection")
+        public AccessContext(string connectString) : base(connectString)
         {
-
-        }
-        
-        public DbSet<Student> students { get; set; }
-    }
-
-    public class TypesOfStudyContext : DbContext
-    {
-        public TypesOfStudyContext() : base("DefaultConnection")
-        {
-
+            Database.SetInitializer<AccessContext>(new DropCreateDatabaseIfModelChanges<AccessContext>());
         }
 
-        public DbSet<TypesOfStudy> typesOfStudy { get; set; }
-    }
-
-    public class TypesPayStudyContext : DbContext
-    {
-        public TypesPayStudyContext() : base("DefaultConnection")
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<Journal>().HasRequired(x => x.Group).WithRequiredDependent(x => x.Journal).Map(c => c.MapKey("GroupId"));
         }
 
-        public DbSet<TypesPayStudy> typesPayStudy { get; set; }
-    }
-
-    public class GroupContext : DbContext
-    {
-        public GroupContext() : base("DefaultConnection")
-        {
-
-        }
-
-        public DbSet<Group> groups { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Journal> Journals { get; set; }
+        public DbSet<JournalSubject> JournalsSubject { get; set; }
+        public DbSet<Mark> Marks { get; set; }
     }
 }

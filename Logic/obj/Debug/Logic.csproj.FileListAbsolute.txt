@@ -14,3 +14,6 @@ C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Access.pdb
 C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Access.dll.config
 C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Domain.dll
+C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Domain.pdb
+C:\Users\pauto\source\repos\SuccessJournal\Logic\bin\Debug\Domain.dll.config
